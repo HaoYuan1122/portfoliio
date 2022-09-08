@@ -1,14 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        .center{
+            width:2000px;
+            margin:auto;
+            background-color: gainsboro;
+        }
+        *{
+            margin:0;
+        }
+        nav{
+            position: fixed;
+            z-index: 0;
+            top:0;
+            display:flex;
+            justify-content: center;
+            width: 2000px;
+            height:3em;
+            background-color: pink;
+        }
+        nav>a {
+            font-size: 2rem;
+            color: #0275d8;
+            text-decoration: none;
+            margin-left: 3rem; 
+        }
+        #AboutMe{
+            background-color: aqua;
+            height: 1000px;
+        }
+        #Skills{
+            background-color: red;
+            height: 1000px;
+        }
+        #Projects{
+            background-color: yellow;
+            height: 1000px;
+
+        }
+        #Contact{
+            background-color: green;
+            height: 1000px;
+
+        }
+        div>section{
+            padding-top:4rem;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Who am I?</h1>
+    <div class="center">
+        <nav>
+            <a href="#AboutMe">About Me</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+        <section id="AboutMe">About Me</section>
+        <section id="Skills">Skills</section>
+        <section id="Projects">Projects</section>
+        <section id="Contact">Contact</section>
+
+    </div>
+
+
+
+
+
+
+
     <script src="./script.js"></script>
 </body>
+
 </html>

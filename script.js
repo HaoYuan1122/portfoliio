@@ -1,3 +1,3 @@
 const h2=document.createElement('h2')
-h2.innerHTML='This content is added by JavaScript'
+h2.innerHTML=''
 document.querySelector('body').appendChild(h2)
