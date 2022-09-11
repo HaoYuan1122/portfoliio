@@ -8,68 +8,133 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="./style.css">
     <style>
-        .center{
-            width:2000px;
-            margin:auto;
-            background-color: gainsboro;
+       
+
+        * {
+            margin: 0;
         }
-        *{
-            margin:0;
-        }
-        nav{
+
+        .nav {
+            top: 0;
             position: fixed;
-            z-index: 0;
-            top:0;
-            display:flex;
+            z-index: 1;
+            display: flex;
             justify-content: center;
-            width: 2000px;
-            height:3em;
-            background-color: pink;
+            background-color: beige;
+            width: 100%;
+            height: 60px;
+
         }
-        nav>a {
-            font-size: 2rem;
+
+        div.nav>a {
+            font-size: 1.5rem;
             color: #0275d8;
             text-decoration: none;
-            margin-left: 3rem; 
+            text-align: center;
+            padding: 0 2em;
+            line-height: 2em;
         }
-        #AboutMe{
+        div.nav>a:hover{
+            background-color: #D6CBC2;
+        }
+
+        #AboutMe {
             background-color: aqua;
             height: 1000px;
+            
         }
-        #Skills{
+
+        #Skills {
             background-color: red;
             height: 1000px;
         }
-        #Projects{
+
+        #Projects {
             background-color: yellow;
             height: 1000px;
 
         }
-        #Contact{
+
+        #Contact {
             background-color: green;
             height: 1000px;
 
         }
-        div>section{
-            padding-top:4rem;
+
+        section {
+            padding: 5rem 3rem;
+        }
+        #Profile{
+            width: 70%;
+            margin:5em auto;
+            text-align: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #MyBasicInfo{
+            padding:0 0 0 3em;
+        }
+        #MyBasicInfo p{
+            margin:1em 0;
+        }
+        #Profile img{
+            width: 10em;
+            border-radius: 1em;
+            transition: 0.5s;
+        }
+        #Profile img:hover{
+            transform: scale(1.1);
+        }
+        #MyCV>div>a>img{
+            width: 3em;
+        }
+        #MyCV>div{
+            padding-top: 2em;
+            display: flex;
+            justify-content: space-evenly;
         }
     </style>
 </head>
 
 <body>
-    <div class="center">
-        <nav>
+        <div class="nav">
             <a href="#AboutMe">About Me</a>
             <a href="#Skills">Skills</a>
             <a href="#Projects">Projects</a>
             <a href="#Contact">Contact</a>
-        </nav>
-        <section id="AboutMe">About Me</section>
+        </div>
+
+        <section id="AboutMe">
+            <h1>About Me</h1>
+            <div id="Profile">
+                <img src="./images/wechat_profile.jpg" alt="profile">
+                <div id="MyBasicInfo">
+                    <h2>Hao Yuan</h2>
+                    <p>I'm studying full-stack software engineering in Academy Xi based in Melbourne. Passionate about front-end website development and responsive design. 
+                    </p>
+                    <p>My previous career was in construction industry. I worked for 2 years in China as a building construction engineer. Seven years ago, I came in Adelaide for study in civil and environmental engineering. I had been in contruciton industry for 4 years until late 2021, I found my passion in tech industry. Therefore, I've made up my mind to chanllenge myself to take this tech adventure.</p>
+                    <p>I have already learnt basic html, css and javascript. I am continuing building up my tech skill. The upcoming skills I will learn by finishing this immersive course are React, Vue, Ruby and Rail, mySQL, bootstrap.</p>
+                    <div id="MyCV">
+                        <a href="#"><h3>Find my CV here.</h3></a>
+                        <div>
+                            <a href="#"><img src="images/cv.png" alt=""></a>
+                            <a href="#"><img src="./images/linkedin.png" alt=""></a>
+                            <a href="#"><img src="./images/github.png" alt=""></a>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+            
+
+
+        </section>
         <section id="Skills">Skills</section>
         <section id="Projects">Projects</section>
         <section id="Contact">Contact</section>
 
-    </div>
 
 
 

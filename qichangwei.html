@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            background-color: #BDBDBD;
+        }
+
+        .center {
+            width: 900px;
+            margin: 50px auto;
+            text-align: center;
+            /* display:flex; */
+            /* align-items: center; */
+        }
+
+        .xi img {
+            width: 300px;
+            height: 300px;
+            display: block;
+            transform:scale(0.9);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .xi {
+            width: 300px;
+            height: 350px;
+            margin: 0 auto;
+            background-image: linear-gradient(90deg, #222, #444);
+        }
+
+        p {
+            margin: 0px auto;
+            color: white;
+            font-size: 18px;
+            background-image: linear-gradient(90deg, #222, #444);
+            line-height:50px;
+        }
+        .center .xi .upper{
+            background-image: linear-gradient(90deg, #222, #444);
+            position:relative;
+            z-index:10;
+        }
+
+        .center .xi .lower{
+            color:red;
+            width: 300px;
+            height: 150px;
+            box-sizing: border-box;
+            background-image:linear-gradient(90deg,#FFD806,#C27A00);
+            transform:translateY(-200px);
+            transition:1s;
+        }  
+        .center .xi:hover .lower {
+            transform: translateY(0);
+            position:relative;
+            z-index:9;
+        }
+        .center .xi:hover .upper p{
+            color:red;
+            background-image:linear-gradient(90deg,#FFD806,#C27A00);
+        }
+        .center .xi:hover .upper img{
+            transform:scale(1)
+        }
+        .taijian{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+            margin-top:20px;
+            display:flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .item{
+            width: 270px;
+            height: 300px;
+            text-align: center;
+            background-image: linear-gradient(90deg, #222, #444);
+            color: #fff;
+            transition:1s;
+  
+        }
+        .item:nth-child(-n+3) .upper{
+            background-image: linear-gradient(90deg, #222, #444);
+            position:relative;
+            z-index:8;
+        }
+        .item:nth-child(n+4) .upper{
+            background-image: linear-gradient(90deg, #222, #444);
+            position:relative;
+            z-index:2;
+        }
+        .item .lower{
+            color:red;
+            width: 270px;
+            height: 210px;
+            box-sizing: border-box;
+            background-image:linear-gradient(90deg,#FFD806,#C27A00);
+            transform:translateY(-210px);
+            transition:0.7s;
+            position:relative;
+            z-index: 1;
+        }
+        .itempic{
+            width: 270px;
+            height: 270px;
+            display: block;
+            transform:scale(0.9);
+        }
+
+        .item:nth-child(-n+3):hover .lower{
+            transform:translateY(0);
+            position:relative;
+            z-index:3;
+        }
+        .item:nth-child(n+4):hover .lower{
+            transform:translateY(0);
+            position:relative;
+            z-index:1;
+        }
+        .center .item:hover .upper p{
+            color:red;
+            background-image:linear-gradient(90deg,#FFD806,#C27A00);
+        }
+
+      .taijian .upper:hover .itempic{
+            transform:scale(1)
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h1>庆丰帝和他的六个太监</h1>
+        <div class="xi">
+            <div class="upper">
+                <img src="./img/01xijinping.jpg" alt="">
+                <p>
+                    刁禁评撒币维尼庆丰土包子犬帝
+                </p>
+            </div>
+            <div class="lower">
+                习近平（1953年6月15日－），祖籍河南邓州，籍贯陝西富平，生于北京，中国共产党、中华人民共和国政治人物，1969年参加工作，1974年1月10日加入中国共产党，毕业于清华大学化工系基本有机合成专业，修有清华大学马克思主义理论与思想政治教育专业的法学博士学位。
+            </div>
+        </div>
+        <div class="taijian">
+            <div class="item">
+                <div class="upper">
+                    <img src="./img/likeqiang.jpg" alt="" class="itempic">
+                    <p>
+                        李克强
+                    </p>
+                </div>
+                <div class="lower">
+                    李克强在安徽合肥出生并长大，早年曾是安徽凤阳县的下鄉插隊知識青年，插隊期间担任过生产队的党支部书记。 1970年代末高考制度恢复后，考入北京大学法律系学习，毕业后留在校团委工作，并在不久之后进入共青团中央系统任职，于1993年出任共青团中央书记处第一书记。 1997年后，陆续在河南、辽宁两省担任党政主要领导职务。
+                </div>
+            </div>
+            <div class="item">
+                <div class="upper">
+                    <img src="./img/07hanzheng.jpg" alt="" class="itempic">
+                    <p>
+                        韩正
+                    </p>
+                </div>
+                <div class="lower">
+                    第十九届中共中央政治局常委（排名第七）、现任国务院副总理（排名第一）、中共国务院党组副书记。 1954年4月生于上海，1975年12月参加工作，1979年5月加入中国共产党，毕业于华东师范大学。 曾长期在上海市工作，历任上海市人民政府市长、中共上海市委书记等职务。
+                </div>
+            </div>
+            <div class="item">
+                <div class="upper">
+                    <img src="./img/3lizhanshu.jpg" alt="" class="itempic">
+                    <p>
+                        栗战书
+                    </p>
+                </div>
+                <div class="lower">
+                    李克强在安徽合肥出生并长大，早年曾是安徽凤阳县的下鄉插隊知識青年，插隊期间担任过生产队的党支部书记。 1970年代末高考制度恢复后，考入北京大学法律系学习，毕业后留在校团委工作，并在不久之后进入共青团中央系统任职，于1993年出任共青团中央书记处第一书记。 1997年后，陆续在河南、辽宁两省担任党政主要领导职务。
+                </div>
+            </div>
+            <div class="item">
+                <div class="upper">
+                    <img src="./img/04wangyang.jpg" alt="" class="itempic">
+                    <p>
+                        汪洋
+                    </p>
+                </div>
+                <div class="lower">
+                    李克强在安徽合肥出生并长大，早年曾是安徽凤阳县的下鄉插隊知識青年，插隊期间担任过生产队的党支部书记。 1970年代末高考制度恢复后，考入北京大学法律系学习，毕业后留在校团委工作，并在不久之后进入共青团中央系统任职，于1993年出任共青团中央书记处第一书记。 1997年后，陆续在河南、辽宁两省担任党政主要领导职务。
+                </div>
+            </div>
+            <div class="item">
+                <div class="upper">
+                    <img src="./img/05wanghuning.jpg" alt="" class="itempic">
+                    <p>
+                        王沪宁
+                    </p>
+                </div>
+                <div class="lower">
+                    李克强在安徽合肥出生并长大，早年曾是安徽凤阳县的下鄉插隊知識青年，插隊期间担任过生产队的党支部书记。 1970年代末高考制度恢复后，考入北京大学法律系学习，毕业后留在校团委工作，并在不久之后进入共青团中央系统任职，于1993年出任共青团中央书记处第一书记。 1997年后，陆续在河南、辽宁两省担任党政主要领导职务。
+                </div>
+            </div>
+            <div class="item">
+                <div class="upper">
+                    <img src="./img/06zhaoleji.jpg" alt="" class="itempic">
+                    <p>
+                        赵乐际
+                    </p>
+                </div>
+                <div class="lower">
+                    李克强在安徽合肥出生并长大，早年曾是安徽凤阳县的下鄉插隊知識青年，插隊期间担任过生产队的党支部书记。 1970年代末高考制度恢复后，考入北京大学法律系学习，毕业后留在校团委工作，并在不久之后进入共青团中央系统任职，于1993年出任共青团中央书记处第一书记。 1997年后，陆续在河南、辽宁两省担任党政主要领导职务。
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
