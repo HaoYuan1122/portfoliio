@@ -20,17 +20,17 @@
             justify-content: center;
             background-color: beige;
             width: 100%;
-            height: 60px;
+            height: 2.7em;
 
         }
 
         div.nav>a {
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: #0275d8;
             text-decoration: none;
             text-align: center;
             padding: 0 2em;
-            line-height: 2em;
+            line-height: 2.7em;
         }
 
         div.nav>a:hover {
@@ -61,12 +61,12 @@
         }
 
         section {
-            padding: 5rem 3rem 1rem 3rem;
+            padding: 4rem 3rem 1rem 3rem;
         }
 
         #Profile {
             width: 70%;
-            margin: 5em auto;
+            margin: 5vh auto;
             text-align: left;
             display: flex;
             justify-content: center;
@@ -82,10 +82,13 @@
             margin: 1em 0;
         }
 
-        #Profile >div>img {
+        #Profile>div>img {
             width: 10em;
             border-radius: 1em;
             transition: 0.5s;
+        }
+        #Profile>div>h2{
+            text-align: center;
         }
 
         #Profile img:hover {
@@ -102,47 +105,85 @@
             justify-content: space-evenly;
         }
 
-        /* 'below is device' */
-        @media screen and (max-width: 800px) {
-            div.nav>a {
-                width: 25%;
-                font-size: 3.25vw;
-                color: #0275d8;
-                text-decoration: none;
+        h1 {
+            margin-left: 15%;
+            border-left: solid red 0.2em;
+            padding-left: 0.5em;
+            font-size: 2.2em;
+        }
+
+        /* 'below is responsive design' */
+        @media (max-width: 600px) {
+            div.nav>a{
+                padding:0 1rem;
+                font-size: 0.9rem;
+                vertical-align: middle;
+            }
+            #DescriptionIcon {
+                display: none;
+            }
+            #ProfileIcon>div{
+                display: flex;
+                justify-content: space-around;
+                width:60vw;
+            }
+            #ProfileIcon {
                 text-align: center;
-                padding: 2vw 2vw;
-                line-height: 6.5vw;
+            }
+            #Profile>div>img{
+                display: block;
+                margin: 0 auto;
             }
 
-            .nav {
-                top: 0;
-                position: fixed;
-                z-index: 1;
-                display: flex;
-                justify-content: space-evenly;
-                background-color: beige;
-                width: 100vw;
-                height: 10vw;
+            section {
+                padding: 1rem 1rem 1rem 1rem;
+            }
 
+            #MyBasicInfo {
+                padding: 0 0 0 0em;
             }
 
             #Profile {
                 width: 95%;
-                margin: 5vw auto;
-                text-align: left;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: nowrap;
+                flex-direction: column-reverse;
             }
 
-            div#MyBasicInfo>div.MyCV{
+            h1 {
+                display: none;
+            }
+        }
+
+        @media (min-width: 600px) and (max-width: 800px) {
+            #DescriptionIcon {
                 display: none;
             }
 
+            #Profile {
+                width: 90%;
+            }
+
+            h1 {
+                display: none;
+            }
         }
-        @media screen and (min-width: 1000px){
-            #Profile>div>.MyCV{
+
+        @media (min-width: 800px) and (max-width: 1000px) {
+            #ProfileIcon {
+                display: none;
+            }
+
+            #Profile {
+                width: 90%;
+            }
+
+            h1 {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            #ProfileIcon {
                 display: none;
             }
         }
@@ -160,10 +201,10 @@
     <section id="AboutMe">
         <h1>About Me</h1>
         <div id="Profile">
-            <div>
+            <div >
                 <img src="./images/wechat_profile.jpg" alt="profile">
-
-                <div class="MyCV">
+                <h2>Hao Yuan</h2>
+                <div id="ProfileIcon" class="MyCV">
                     <a href="#">
                         <h3>Find my CV here.</h3>
                     </a>
@@ -175,7 +216,7 @@
                 </div>
             </div>
             <div id="MyBasicInfo">
-                <h2>Hao Yuan</h2>
+                
                 <p>I'm studying full-stack software engineering in Academy Xi based in Melbourne. Passionate about
                     front-end website development and responsive design.
                 </p>
@@ -186,7 +227,7 @@
                 <p>I have already learnt basic git, html, css and javascript. I am continuing building up my tech skill.
                     The upcoming skills I will learn by finishing this immersive course are React, Vue, Ruby and Rail,
                     mySQL, bootstrap.</p>
-                <div class="MyCV">
+                <div id="DescriptionIcon" class="MyCV">
                     <a href="#">
                         <h3>Find my CV here.</h3>
                     </a>
@@ -204,9 +245,15 @@
 
 
     </section>
-    <section id="Skills">Skills</section>
-    <section id="Projects">Projects</section>
-    <section id="Contact">Contact</section>
+    <section id="Skills">
+        <h1>Skills</h1>
+    </section>
+    <section id="Projects">
+        <h1>Projects</h1>
+    </section>
+    <section id="Contact">
+        <h1>Contact</h1>
+    </section>
 
 
 
