@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Hao Yuan's Portfolio</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive_design.css">
     <style>
         * {
             margin: 0;
@@ -18,55 +19,38 @@
             z-index: 1;
             display: flex;
             justify-content: center;
-            background-color: beige;
+            background-color: rgba(214, 203, 194, 0.984);
             width: 100%;
             height: 2.7em;
 
         }
 
         div.nav>a {
-            font-size: 1rem;
-            color: #0275d8;
+            
+            color: gray;
             text-decoration: none;
             text-align: center;
             padding: 0 2em;
             line-height: 2.7em;
+            transition: 1s ease
         }
 
         div.nav>a:hover {
-            background-color: #D6CBC2;
+            transform: red;
         }
 
-        #AboutMe {
-            background-color: aqua;
-            /* height: 1000px; */
 
-        }
-
-        #Skills {
-            background-color: red;
-            height: 1000px;
-        }
-
-        #Projects {
-            background-color: yellow;
-            height: 1000px;
-
-        }
-
-        #Contact {
-            background-color: green;
-            height: 1000px;
-
+        div.nav>a:hover {
+            color: black;
         }
 
         section {
             padding: 4rem 3rem 1rem 3rem;
+            background-color:#FDF7F2
         }
 
         #Profile {
-            width: 70%;
-            margin: 5vh auto;
+            margin: 3.5vh auto;
             text-align: left;
             display: flex;
             justify-content: center;
@@ -74,9 +58,7 @@
             flex-wrap: nowrap;
         }
 
-        #MyBasicInfo {
-            padding: 0 0 0 3em;
-        }
+        
 
         #MyBasicInfo p {
             margin: 1em 0;
@@ -87,7 +69,8 @@
             border-radius: 1em;
             transition: 0.5s;
         }
-        #Profile>div>h2{
+
+        #Profile>div>h2 {
             text-align: center;
         }
 
@@ -107,101 +90,65 @@
 
         h1 {
             margin-left: 15%;
-            border-left: solid red 0.2em;
+            border-left: solid rgb(202, 76, 97) 0.2em;
             padding-left: 0.5em;
             font-size: 2.2em;
         }
 
-        /* 'below is responsive design' */
+        #SkillDescription {
+            width: 70%;
+            margin: 3.5vh auto;
+            text-align: center;
+        }
+
+       
+        #SkillSets>div {
+            background-color: white;
+            margin-top: 2em;
+            padding:0.8em 0.5em;
+            border-radius: 0.4em;
+            box-shadow: inset 0 0 10px rgb(0 0 0 / 30%)
+        }
+        #SkillSets>div>img{
+            width: 3em;
+            height: 3em;;
+        }
+        #SkillSets>div>ul{
+            list-style: none;
+            text-align: center;
+            padding:0.5em 0;
+        }
+        #SkillSets>div>ul>li{
+            font-size:15px;
+            padding:0.2em;
+        }
+        
+        #SingleSkillBlock{
+            /* display:none; */
+            transform: translateY(-300px);
+        }
+        #SkillSets>div>ul>li:hover>div{
+            display: block;
+        }
+
         @media (max-width: 600px) {
-            div.nav>a{
-                padding:0 1rem;
-                font-size: 0.9rem;
-                vertical-align: middle;
-            }
-            #DescriptionIcon {
-                display: none;
-            }
-            #ProfileIcon>div{
-                display: flex;
-                justify-content: space-around;
-                width:60vw;
-            }
-            #ProfileIcon {
-                text-align: center;
-            }
-            #Profile>div>img{
-                display: block;
-                margin: 0 auto;
-            }
-
-            section {
-                padding: 1rem 1rem 1rem 1rem;
-            }
-
-            #MyBasicInfo {
-                padding: 0 0 0 0em;
-            }
-
-            #Profile {
-                width: 95%;
-                display: flex;
-                flex-direction: column-reverse;
-            }
-
-            h1 {
-                display: none;
-            }
-        }
-
-        @media (min-width: 600px) and (max-width: 800px) {
-            #DescriptionIcon {
-                display: none;
-            }
-
-            #Profile {
-                width: 90%;
-            }
-
-            h1 {
-                display: none;
-            }
-        }
-
-        @media (min-width: 800px) and (max-width: 1000px) {
-            #ProfileIcon {
-                display: none;
-            }
-
-            #Profile {
-                width: 90%;
-            }
-
-            h1 {
-                display: none;
-            }
-        }
-
-        @media (min-width: 1000px) {
-            #ProfileIcon {
-                display: none;
-            }
+            
         }
     </style>
 </head>
 
 <body>
     <div class="nav">
-        <a href="#AboutMe">About Me</a>
-        <a href="#Skills">Skills</a>
-        <a href="#Projects">Projects</a>
-        <a href="#Contact">Contact</a>
+        <a href="#AboutMe"><span>About Me</span></a>
+        <a href="#Skills"><span>Skills</span></a>
+        <a href="#Projects"><span>Projects</span></a>
+        <a href="#Contact"><span>Contact</span></a>
     </div>
 
     <section id="AboutMe">
         <h1>About Me</h1>
         <div id="Profile">
-            <div >
+            <div>
                 <img src="./images/wechat_profile.jpg" alt="profile">
                 <h2>Hao Yuan</h2>
                 <div id="ProfileIcon" class="MyCV">
@@ -216,7 +163,7 @@
                 </div>
             </div>
             <div id="MyBasicInfo">
-                
+
                 <p>I'm studying full-stack software engineering in Academy Xi based in Melbourne. Passionate about
                     front-end website development and responsive design.
                 </p>
@@ -245,8 +192,47 @@
 
 
     </section>
+
     <section id="Skills">
         <h1>Skills</h1>
+        <div id="SkillDescription">
+            <p>I have more than 5 years' experience building rich web applications. Below is a quick overview of my main technical skill sets and tools I use.   
+            </p>
+
+            <div id="SkillSets">
+                <div id="FrontEndSkills">
+                    <img src="./images/frontend.png" alt="">
+                    <h3>Front End</h3>
+                    <ul>
+                        <li id="html&css">HTML & CSS </li>
+                        <li id="javascript">Javascript</li>
+                        <li id="bootstrap">Bootstrap</li>
+                        <li id="react">React</li>
+                    </ul>
+                </div>
+                <div id="BackEndSkills">
+                    <img src="./images/backend.png" alt="">
+                    <h3>Back End</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>Node.js</li>
+                        <li>Ruby&Rail</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                <div id="OtherSkills">
+                    <img src="./images/others.png" alt="">
+                    <h3>Others</h3>
+                    <ul>
+                        <li>Prototyping</li>
+                        <li>Git</li>
+                        <li>Deployment</li>
+                        <li>Visual Studio Code</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </section>
     <section id="Projects">
         <h1>Projects</h1>

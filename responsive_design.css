@@ -1,0 +1,138 @@
+/* 'below is About Me' */
+@media (max-width: 600px) {
+    div.nav>a {
+        
+        font-size: 3vw;
+        padding: 0 0.5rem;
+        vertical-align: middle;
+    }
+
+    #DescriptionIcon {
+        display: none;
+    }
+
+    #ProfileIcon>div {
+        display: flex;
+        justify-content: space-around;
+        width: 60vw;
+    }
+
+    #ProfileIcon {
+        text-align: center;
+    }
+
+    #Profile>div>img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    #MyBasicInfo {
+        padding: 0 0 0 0em;
+    }
+
+    #Profile {
+        width: 95%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    h1 {
+        display: none;
+    }
+    #SkillSets{
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+    }
+    #SkillSets>div {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+    #DescriptionIcon {
+        display: none;
+    }
+
+    #Profile {
+        width: 90%;
+    }
+
+    h1 {
+        display: none;
+    }
+    #MyBasicInfo {
+        padding: 0 0 0 3em;
+    }
+    div.nav>a{
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 4rem 3rem 1rem 3rem;
+    }
+    
+    #SkillSets{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #SkillSets>div {
+        width: 28%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+    #ProfileIcon {
+        display: none;
+    }
+
+    #Profile {
+        width: 90%;
+    }
+
+    h1 {
+        display: none;
+    }
+    #MyBasicInfo {
+        padding: 0 0 0 3em;
+    }
+    div.nav>a{
+        font-size: 1rem;
+    }
+    #SkillSets{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #SkillSets>div {
+        width: 28%;
+    }
+}
+
+@media (min-width: 1000px) {
+    #ProfileIcon {
+        display: none;
+    }
+    #Profile {
+        width: 70%;
+    }
+    #MyBasicInfo {
+        padding: 0 0 0 3em;
+    }
+    div.nav>a{
+        font-size: 1rem;
+    }
+    #SkillSets{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #SkillSets>div {
+        width: 28%;
+    }
+}
+
+/* 'below is Skills' */
