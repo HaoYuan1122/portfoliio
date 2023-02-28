@@ -6,69 +6,40 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .center{
-            width: 300px;
-            height: 400px;
-            background-color: gray;
-            margin:200px auto;
+        .wrap{
+            width: 205px;
+            height: 289px;
+            margin: 100px auto;
+            border:1px solid blue;
+            position:relative;
         }
-        .upper{
-            width: 300px;
-            height: 400px;
-            text-align: center;
+        img{
+            display: block;
+            position:absolute;
+            transition:2s;
+            backface-visibility: hidden;
+            width: 205px;
+            height: 289px;
         }
-        .upper>img{
-            width: 300px;
-            height: 300px;
-            transform: scale(0.9);
+       
+        .fan{
+            transform:rotateY(180deg)
         }
-        .lower{
-            width: 300px;
-            height: 200px;
-            transform: translateY(-220px);
-            background-color: antiquewhite;
-            position: relative;
-            z-index: -1;
-            transition:1s;
+        .wrap:hover .zheng{
+            transform: rotateY(180deg);
         }
-        ul{
-            list-style:none;
-            padding: 0;
-        }
-        .upper>ul>li>h3:hover ~ .lower{
-            transform: translateY(-20px);
-            position: relative;
+        .wrap:hover .fan{
+            transform: rotateY(0deg);
         }
 
     </style>
 </head>
 <body>
-   <div class="center">
-        <div class="upper">
-            <img src="./images/wechat_profile.jpg" alt="">
-           <ul>
-            <li>
-                <h3>李熹圣</h3>
-                <p class="lower">Design d'un site avec utilisation de media queries pour gérer le comportement responsif, de transitions et animations, variables etcDesign d'un site avec utilisation de media queries pour gérer le comportement responsif, de transitions et animations, variables etc</p>
-            </li>
-            <li>
-                <h3>李熹圣</h3>
-                <p class="lower">Design d'un site avec utilisation de media queries pour gérer le comportement responsif, de transitions et animations, variables etcDesign d'un site avec utilisation de media queries pour gérer le comportement responsif, de transitions et animations, variables etc</p>
-            </li>
-            <!-- <li>
-                苑墨辰
-                <p class="lower">Design d'un site avec utilisation de media queries pour gérer le comportement responsif, de transitions et animations, variables etcDesign d'un site avec utilisation de media queries pour gérer le comportement responsif, de transitions et animations, variables etc</p>
-            </li>
-            <li>
-                李熹圣&苑墨辰
-                <p class="lower">Design d'un site avec utilisation de media queries pour gérer le comportement responsif, de transitions et animations, variables etcDesign d'un site avec utilisation de media queries pour gérer le comportement responsif, de transitions et animations, variables etc</p>
-            </li> -->
-
-           </ul>
-
-        </div>
-        
+   <div class="wrap">
+     <img src="./images/backend.png" alt="" class="zheng">
+     <img src="./images/frontend.png" alt="" class="fan">
    </div>
+   
     
 </body>
 </html>

@@ -30,7 +30,6 @@
             color: gray;
             text-decoration: none;
             text-align: center;
-            padding: 0 2em;
             line-height: 2.7em;
             transition: 1s ease
         }
@@ -63,13 +62,32 @@
         #MyBasicInfo p {
             margin: 1em 0;
         }
-
-        #Profile>div>img {
+        #profileImage{
             width: 10em;
+            height: 10em;
             border-radius: 1em;
-            transition: 0.5s;
+            position: relative;
         }
-
+        #Profile>div>div>img {
+            width: 10em;
+            height: 10em;
+            border-radius: 1em;
+            transition: 1s;
+            position:absolute;
+            backface-visibility: hidden;
+        }
+        #profileFront{
+            transform: rotateY(0deg);
+        }
+        #profileBack{
+            transform: rotateY(180deg);
+        }
+        #profileImage:hover #profileFront{
+            transform: rotateY(180deg)
+        }
+        #profileImage:hover #profileBack{
+            transform: rotateY(0deg)
+        }
         #Profile>div>h2 {
             text-align: center;
         }
@@ -101,7 +119,6 @@
             text-align: center;
         }
 
-       
         #SkillSets>div {
             background-color: white;
             margin-top: 2em;
@@ -149,7 +166,13 @@
         <h1>About Me</h1>
         <div id="Profile">
             <div>
-                <img src="./images/wechat_profile.jpg" alt="profile">
+                <div id="profileImage">
+                    <img src="./images/profilefront.jpg" alt="profile" id="profileFront">
+                    <img src="./images/profileback.jpg" alt="profile"
+                    id="profileBack">
+
+                </div>
+                
                 <h2>Hao Yuan</h2>
                 <div id="ProfileIcon" class="MyCV">
                     <a href="#">
