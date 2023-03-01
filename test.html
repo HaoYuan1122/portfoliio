@@ -6,40 +6,72 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .wrap{
-            width: 205px;
-            height: 289px;
-            margin: 100px auto;
-            border:1px solid blue;
-            position:relative;
+        body{
+            background-color: pink;
         }
-        img{
-            display: block;
-            position:absolute;
-            transition:2s;
-            backface-visibility: hidden;
-            width: 205px;
-            height: 289px;
-        }
-       
-        .fan{
-            transform:rotateY(180deg)
-        }
-        .wrap:hover .zheng{
-            transform: rotateY(180deg);
-        }
-        .wrap:hover .fan{
-            transform: rotateY(0deg);
-        }
+       .center {
+        background-color: antiquewhite;
+        width: 70%;
+        margin:20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+       }
+       .center>div{
+            width: 20em;
+            height: 25em;
+            background-color: aqua;
+            text-align: center;
+            border-radius: 0.4em;
+            box-shadow: inset 0 0 10px rgb(0 0 0 / 30%)
+       }
+       .center>div>a>img{
+            width: 20em;
+            height: 20em;
+            transform: scale(0.9);
+            transition:1s;
+            border-radius: 0.4em;
+       }
+       .center h4 {
+         margin:0 0;
+       }
+       .center p{
+        margin:0;
+        padding-top: 1em
+       }
+       .center>div:hover img{
+        transform: scale(1);
+       }
+       a{
+        text-decoration: none;
+        color:black;
+       }
 
     </style>
 </head>
 <body>
-   <div class="wrap">
-     <img src="./images/backend.png" alt="" class="zheng">
-     <img src="./images/frontend.png" alt="" class="fan">
+   <div class="center">
+        <div class="one">
+            <a href="https://vprahaladhan.github.io/projects.html"><img src="./images/profileback.jpg" alt=""></a>
+            <div>
+                <a href="https://vprahaladhan.github.io/projects.html"><h4>黄色网站</h4></a>
+                <p>这是一个gay bdsm的网站</p>
+            </div>
+        </div>
+        <div class="two">
+            <a href="https://vprahaladhan.github.io/projects.html"><img src="./images/profileback.jpg" alt=""></a>
+            <div>
+                <h4>黄色网站</h4>
+                <p>这是一个gay bdsm的网站</p>
+            </div>
+        </div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+        <div class="sven"></div>
+
    </div>
-   
-    
 </body>
 </html>
