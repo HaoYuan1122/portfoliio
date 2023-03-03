@@ -8,232 +8,8 @@
     <title>Hao Yuan's Portfolio</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./responsive_design.css">
-    <style>
-        * {
-            margin: 0;
-        }
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 
-
-        .nav {
-            top: 0;
-            position: fixed;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            background-color: rgba(214, 203, 194, 0.984);
-            width: 100%;
-            height: 2.7em;
-
-        }
-
-        div.nav>a {
-
-            color: gray;
-            text-decoration: none;
-            text-align: center;
-            line-height: 2.7em;
-            transition: 1s ease
-        }
-
-        div.nav>a:hover {
-            transform: red;
-        }
-
-
-        div.nav>a:hover {
-            color: black;
-        }
-
-        section {
-            padding: 4rem 3rem 1rem 3rem;
-            background-color: #FDF7F2
-        }
-
-        #Profile {
-            margin: 3.5vh auto;
-            text-align: left;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: nowrap;
-        }
-
-
-
-        #MyBasicInfo p {
-            margin: 1em 0;
-        }
-
-        #profileImage {
-            width: 10em;
-            height: 10em;
-            border-radius: 1em;
-            position: relative;
-            cursor: pointer;
-        }
-
-        #Profile>div>div>img {
-            width: 10em;
-            height: 10em;
-            border-radius: 1em;
-            transition: 1s;
-            position: absolute;
-            backface-visibility: hidden;
-        }
-
-        #profileFront {
-            transform: rotateY(0deg);
-        }
-
-        #profileBack {
-            transform: rotateY(180deg);
-        }
-
-        #profileImage:hover #profileFront {
-            transform: rotateY(180deg)
-        }
-
-        #profileImage:hover #profileBack {
-            transform: rotateY(0deg)
-        }
-
-        #Profile>div>h2 {
-            text-align: center;
-        }
-
-        #Profile img:hover {
-            transform: scale(1.1);
-        }
-
-        .MyCV>div>a>img {
-            width: 3em;
-        }
-
-        .MyCV>div {
-            padding-top: 2em;
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        h1 {
-            margin-left: 15%;
-            border-left: solid rgb(202, 76, 97) 0.2em;
-            padding-left: 0.5em;
-            font-size: 2.2em;
-        }
-
-        #SkillDescription {
-            width: 70%;
-            margin: 3.5vh auto;
-            text-align: center;
-        }
-
-        #SkillSets>div {
-            background-color: white;
-            margin-top: 2em;
-            padding: 0.8em 0.5em;
-            border-radius: 0.4em;
-            box-shadow: inset 0 0 10px rgb(0 0 0 / 30%)
-        }
-
-        #SkillSets>div>img {
-            width: 3em;
-            height: 3em;
-            ;
-        }
-
-        #SkillSets>div>ul {
-            list-style: none;
-            text-align: center;
-            padding: 0.5em 0;
-        }
-
-        #SkillSets>div>ul>li {
-            font-size: 15px;
-            padding: 0.2em;
-        }
-
-        #SingleSkillBlock {
-            /* display:none; */
-            transform: translateY(-300px);
-        }
-
-        #SkillSets>div>ul>li:hover>div {
-            display: block;
-        }
-
-        #contactForm {
-            margin-left: 15%;
-
-        }
-
-        #contactForm>form>input:not(:last-child) {
-            margin: 3em 1em;
-            display: block;
-            width: 78%;
-            height: 2em;
-        }
-
-        #contactForm>form>input:last-child {
-            margin: 3em 1em;
-            display: block;
-            width: 78%;
-            height: 15em;
-        }
-
-        #myProjects {
-            background-color: #FDF7F2;
-            width: 70%;
-            margin-left: 15%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        #myProjects>div {
-            width: 25em;
-            height: 35em;
-            background-color: #FDF7F2;
-            padding-top: 3em;
-        }
-
-        #myProjects>div>.inner {
-            width: 100%;
-            height: 90%;
-            background-color: white;
-            border-radius: 0.4em;
-            box-shadow: inset 0 0 10px rgb(0 0 0 / 30%);
-            text-align: center;
-        }
-
-        #myProjects img {
-            width: 25em;
-            height: 25em;
-            transform: scale(0.9);
-            border-radius: 0.4em;
-        }
-
-        #myProjects img:hover {
-            transform: scale(0.98);
-            transition: 1s;
-        }
-
-        #myProjects p {
-            padding: 1em 0.5em;
-            color: gray;
-        }
-
-        #myProjects a {
-            text-decoration: none;
-            color: rgb(99, 96, 96)
-        }
-
-        #myProjects a:hover {
-            color: #333;
-            transition: 0.5s;
-        }
-    </style>
 </head>
 
 <body>
@@ -268,16 +44,41 @@
             </div>
             <div id="MyBasicInfo">
 
-                <p>I'm studying full-stack software engineering in Academy Xi based in Melbourne. Passionate about
-                    front-end website development and responsive design.
+                <p>
+                    I am currently seeking a full-stack software engineering position within the IT field. As a student
+                    of full-stack software engineering at Academy Xi in Melbourne, I have gained extensive knowledge in
+                    web development, particularly in front-end website development and responsive design.
                 </p>
-                <p>My previous career was in construction industry. I worked for 2 years in China as a building
-                    construction engineer. Seven years ago, I came in Adelaide for study in civil and environmental
-                    engineering. I had been in contruciton industry for 4 years until late 2021, I found my passion in
-                    tech industry. Therefore, I've made up my mind to chanllenge myself to take this tech adventure.</p>
-                <p>I have already learnt basic git, html, css and javascript. I am continuing building up my tech skill.
-                    The upcoming skills I will learn by finishing this immersive course are React, Vue, Ruby and Rail,
-                    mySQL, bootstrap.</p>
+
+
+                <p>
+                    In addition to my technical skills, I also possess strong soft skills such as communication,
+                    problem-solving, and teamwork, which I believe are essential for success in any workplace.
+                    Throughout my previous career as a building construction engineer in China and my studies in civil
+                    and environmental engineering in Adelaide, I developed valuable skills in project management, team
+                    collaboration, and critical thinking that I can apply to my work in software engineering.
+                </p>
+
+                <p>
+                    I have already gained experience with basic git, HTML, CSS, and JavaScript, and have completed
+                    various projects that showcase my abilities. For example, I designed and developed a responsive
+                    website for a local business that increased its online presence and improved customer engagement. I
+                    am also actively seeking to expand my knowledge and skills through additional coursework beyond my
+                    current immersive course. In the near future, I will be learning React, Vue, Ruby and Rails, mySQL,
+                    and bootstrap, which will further enhance my abilities in web development.
+
+                </p>
+                <p>
+                    As someone who is passionate about the tech industry and invested in my career growth, I keep up
+                    with the latest trends and developments in the field. My ultimate goal is to become a skilled
+                    full-stack software engineer who can contribute to innovative and impactful projects. I am excited
+                    about the opportunity to bring my skills and experience to a new role in the IT field and continue
+                    to grow as a professional.
+                </p>
+
+
+
+
                 <div id="DescriptionIcon" class="MyCV">
                     <a href="#">
                         <h3>Find my CV here.</h3>
@@ -299,9 +100,8 @@
 
     <section id="Skills">
         <h1>My Skills</h1>
-        <div id="SkillDescription">
-            <p>I have more than 5 years' experience building rich web applications. Below is a quick overview of my main
-                technical skill sets and tools I use.
+        <div id="SkillDescription" >
+            <p style="text-align: left;">I have already gained experience with basic git, HTML, CSS, and JavaScript, and have completed various projects that showcase my abilities. For example, I designed and developed a responsive website for a local business that increased its online presence and improved customer engagement. I am also actively seeking to expand my knowledge and skills through additional coursework beyond my current immersive course. In the near future, I will be learning React, Vue, Ruby and Rails, mySQL, and bootstrap, which will further enhance my abilities in web development.
             </p>
 
             <div id="SkillSets">
@@ -439,14 +239,47 @@
     </section>
     <section id="Contact">
         <h1>My Contact</h1>
+        <div class="container" id="contactDetailsTop">
+            <div class="row row-cols-lg-3 pt-3 pb-3 text-center">
+                <div id="myEmail">
+                    <img src="images/email.png" alt="">
+                    <i>haomichaelyuan@gmail.com</i>
+                </div>
+                <div id="myPhoneNumber">
+                    <img src="images/mobile.png" alt="">
+                    <i>+61 0415 141 122</i>
+                </div>
+                <div id="myAddress">
+                    <img src="images/address.png" alt="">
+                    <i>Mebourne CBD</i>
+                </div>
+            </div>
+
+        </div>
         <div id="contactDetails"></div>
         <div id="contactForm">
-            <form action="">
-                <input type="text" placeholder="Your name">
-                <input type="text" placeholder="Your email address">
-                <input type="text" placeholder="Enter your message...">
-                <!-- <button type="submit"><img src="" alt=""></button> -->
-            </form>
+            <div class="mb-4">
+                <label class="form-label">
+                    <h5>Name</h5>
+                </label>
+                <input type="name" class="form-control border-2" placeholder="your name">
+            </div>
+            <div class="mb-4">
+                <label class="form-label ">
+                    <h5>Email address</h5>
+                </label>
+                <input type="email" class="form-control border-2" placeholder="your email address">
+            </div>
+            <div class="mb-4">
+                <label class="form-label">
+                    <h5>Example textarea</h5>
+                </label>
+                <textarea class="form-control  border-2" rows="4" placeholder="your message"></textarea>
+            </div>
+            <button class="btn btn-secondary float-end btn-large  mb-5"
+                onclick="alert(`Sorry, this message was not sent. This feature is still under development.`)">
+                Send </button>
+
         </div>
     </section>
 
